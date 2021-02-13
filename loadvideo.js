@@ -6,18 +6,12 @@
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       
  
-      var section = {
-        start: 10,
-        end: 14
-      };
-      var VIDID="oEh-M5XG_e0";
-  
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player(
-          'player',
+          PLAYERID,
           {
             height: '360',
             width: '640',
