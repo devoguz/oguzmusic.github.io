@@ -2,77 +2,10 @@
 <html >
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-
-<title>Multiple controllable YouTube iframe embeds</title>
-
-
-
-<script src="http://www.youtube.com/player_api"></script>
-
-<style>
-body {padding: 30px}
-table{font-family: verdana; font-size: 13px}
-</style>
-
 </head>
 
 <body>
-<h2 style="text-align: center">Embedding and programmatically controlling multiple videos using the YouTube iframe embed API and the iframe's onload event</h2><br><br>
-
-
-
-<table>
-
-<tr>
-<td style="width: 32%">
-You can embed and programmatically control multiple YouTube videos by putting onloads like the following in (existing) iframes:<br>
-onload="player1=new YT.Player(this)"<br>
-onload="player2=new YT.Player(this)"<br>
-
-etc.<br><br>
-The names for the players (here: <i>player 1</i> and <i>player2</i>) are arbitrarily chosen. They must be used for selecting the video for which we want to execute javascript (video) code. For instance, <i>player2.playVideo()</i> means that the video associated with player2 must start playing etc . 
-<br><br>
-This will only work if we have this in the head:<br>
-
-<i>&lt;script src="http://www.youtube.com/player_api"&gt;&lt;/script&gt;</i>
-<br>
-and if the video-url in the iframe contains <i>html5=1</i> (IE-requirement) and <i>enablejsapi=1</i>.<br><br>
-View source for further info.<br><br>
-Notes:<br>
-1.<br>
-The YouTube ads don't display if the width of the iframe is less than 320 pixels (the iframes to the right are 319px wide).<br>
-2.<br>
-The YouTube API reference for iframe embeds is <a href="javascript: void(0)" onclick="window.open('https://developers.google.com/youtube/iframe_api_reference'); return false">here</a>
-</td>
-
-
-<td style="width: 30%; vertical-align: top; text-align: center  ">
-<button style="cursor: pointer" onclick="player1.loadVideoById('bKZbvluHcNo')">(re)start</button>
-<button style="cursor: pointer" onclick="player1.playVideo()">play</button>
-<button style="cursor: pointer" onclick="player1.pauseVideo()">pause</button><br>
-<button style="cursor: pointer" onclick="player1.seekTo(player1.getDuration())">stop</button>
-<button style="cursor: pointer" onclick="player1.unMute()">sound on</button>
-<button style="cursor: pointer" onclick="player1.mute()">sound off</button>
-<br>
-<iframe style="position: relative; width: 319px; height: 280px;  border: 1px solid black; " src="http://www.youtube.com/embed/bKZbvluHcNo?html5=1&amp;enablejsapi=1&amp;autoplay=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;controls=1&amp;autohide=0&amp;vq=large" frameborder="0" allowfullscreen onload="player1=new YT.Player(this)"></iframe>
-</td>
-
-<td style="width: 30%; vertical-align: top; text-align: center ">
-<button style="cursor: pointer" onclick="player2.loadVideoById('OsLap6ZNNQo')">(re)start</button>
-<button style="cursor: pointer" onclick="player2.playVideo()">play</button>
-<button style="cursor: pointer" onclick="player2.pauseVideo()">pause</button><br>
-<button style="cursor: pointer" onclick="player2.seekTo(player2.getDuration())">stop</button>
-<button style="cursor: pointer" onclick="player2.unMute()">sound on</button>
-<button style="cursor: pointer" onclick="player2.mute()">sound off</button>
-<br>
-<iframe style="position: relative; width: 319px; height: 280px;  border: 1px solid black; " src="http://www.youtube.com/embed/OsLap6ZNNQo?html5=1&amp;enablejsapi=1&amp;autoplay=0&amp;rel=0&amp;showinfo=0&amp;modestbranding=1&amp;controls=1&amp;autohide=0&amp;vq=large" frameborder="0" allowfullscreen onload="player2=new YT.Player(this)"></iframe>
-</td>
-
-</tr>
-
-</table>
-
+  <iframe width="1280" height="725" src="https://www.youtube.com/embed/3xpcBx1Gm-c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 
 </html>
